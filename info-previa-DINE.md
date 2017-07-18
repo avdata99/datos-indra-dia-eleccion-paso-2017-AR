@@ -30,11 +30,13 @@ Todos los archivos descargables desde el servicio del repositorio presentan las 
 En los campos de tipo "Porcentaje", las dos últimas posiciones por la derecha se consideran decimales. Las longitudes que se detallan a continuación en los diseños de los archivos NO incluyen el separador de campos.  
 
 ### Identificación de los registros:
+
 Identificación de tipos de elección:
  - Senadores Nacionales = 2
  - Diputados Nacionales = 3
  - Senadores Provinciales = 5
- - Diputados Provinciales = 6
+ - Diputados Provinciales = 6  
+
 Sección / comuna: Código de Provincia<>"999"
 
 ### Archivos del recuento provisional
