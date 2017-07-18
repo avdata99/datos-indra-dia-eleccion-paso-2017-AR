@@ -42,17 +42,10 @@ Archivos de totales de recuento provisional
 Contiene la información general del recuento provisional totalizada a nivel de sección o comuna.  
 Archivo totales.csv (totales de recuento provisional)
 
+
 |DESCRIPCIÓN | LONGITUD|
 |------------|---------|
 |Código de elección | 1|
-|Código de provincia | 2|
-|Código de sección/ comuna | 3|
-|Día | 2|
-|Hora | 2|
-|Minuto | 2|
-|Código de la agrupación política | 4|
-|Votos a la agrupación política | 8|
-|Porcentaje de votos a la agrupación política | 5|
 |Código de provincia | 2|
 |Código de comuna | 3|
 |Total de mesas | 5|
@@ -78,56 +71,73 @@ Archivo totales.csv (totales de recuento provisional)
 |Hora | 2|
 |Minuto | 2|
 
-Tabla de 10 elementos,
-correspondientes a las listas
-propuestas por cada partido
-Código de lista 4
-Votos al lista 8
-Porcentaje de votos a la
-lista 5
-Archivo auxiliar de agrupaciones políticas / listas.
-Contiene la relación de las agrupaciones políticas y sus listas que intervienen en el proceso.
+### Archivo de recuento provicional por listas
+Contiene la información del recuento provisional de las agrupaciones políticas y las listas, totalizada a los niveles de provincia y sección/comuna.  
+
+Archivo totaleslistas.csv (totales por listas)
+
+|DESCRIPCIÓN | LONGITUD|
+|------------|---------|
+|Código de elección | 1|
+|Código de provincia | 2|
+|Código de sección/ comuna | 3|
+|Día | 2|
+|Hora | 2|
+|Minuto | 2|
+|Código de la agrupación política | 4|
+|Votos a la agrupación política | 8|
+|Porcentaje de votos a la agrupación política | 5|
+|Tabla de 10 elementos, correspondientes a las listas propuestas por cada partido| |
+|Código de lista | 4|
+|Votos al lista | 8|
+|Porcentaje de votos a la lista | 5|
+
+### Archivo auxiliar de agrupaciones políticas / listas.
+
+Contiene la relación de las agrupaciones políticas y sus listas que intervienen en el proceso.  
 Archivo listas.csv
-DESCRIPCIÓN LONGITUD
-Código de agrupación política / lista 4
-Siglas de la agrupación política / lista 50
-Denominación de la agrupación política / lista 100
-Archivo auxiliar de ámbitos.
-Contiene la relación de los ámbitos territoriales: provincias y secciones / comunas.
+
+|DESCRIPCIÓN | LONGITUD|
+|------------|---------|
+|Código de agrupación política / lista | 4 |
+|Siglas de la agrupación política / lista | 50 |
+|Denominación de la agrupación política / lista | 100 |
+
+### Archivo auxiliar de ámbitos.
+Contiene la relación de los ámbitos territoriales: provincias y secciones / comunas.  
 Archivo ambitos.csv
-DESCRIPCIÓN LONGITUD
-Código de provincia 2
-Código de sección/comuna 3
-Nombre del ámbito 40
-Con el fin de que los usuarios de este sistema puedan realizar pruebas previas, la DINE remitirá
-por correo electrónico a los medios que lo hayan solicitado la URL para acceder a unos ficheros
-de pruebas que les permitan hacer y probar sus desarrollos.
-Finalmente, días previos a la jornada electoral la DINE remitirá la URL y claves para uso del
-repositorio durante el recuento el día 13 de agosto.
-Preguntas frecuentes
-Los datos que hay en el repositorio (ámbitos, candidaturas, etc), ¿son definitivos?
+
+|DESCRIPCIÓN | LONGITUD|
+|------------|---------|
+|Código de provincia |2 |
+|Código de sección/comuna | 3|
+|Nombre del ámbito |40|
+
+Con el fin de que los usuarios de este sistema puedan realizar pruebas previas, la DINE remitirá por correo electrónico a los medios que lo hayan solicitado la URL para acceder a unos ficheros de pruebas que les permitan hacer y probar sus desarrollos.  
+Finalmente, días previos a la jornada electoral la DINE remitirá la URL y claves para uso del repositorio durante el recuento el día 13 de agosto.  
+
+### Preguntas frecuentes
+
+#### Los datos que hay en el repositorio (ámbitos, candidaturas, etc), ¿son definitivos?
+
 Dado que las pruebas del repositorio comenzarán antes de disponer de las candidaturas
 definitivas, es bastante probable que dicho repositorio no contenga todas, incluso si fuese
 necesario se utilizarían candidaturas ficticias para disponer de suficientes datos de prueba.
 Según se vayan recibiendo las candidaturas definitivas de las provincias se irán incorporando a
 los ficheros de datos.
-¿Cómo puedo acceder a los datos del repositorio?
-- El acceso al repositorio estará protegido por usuario / password.
-- El repositorio tendrá una página html llamada “descargas.htm” que indicará la fecha y
-hora de los datos, e incluirá un enlace html al fichero tar.gz que contendrá los datos
-actualizados. Este enlace siempre apuntará al fichero de datos más actual.
+
+#### ¿Cómo puedo acceder a los datos del repositorio?
+ - El acceso al repositorio estará protegido por usuario / password.  
+ - El repositorio tendrá una página html llamada “descargas.htm” que indicará la fecha y hora de los datos, e incluirá un enlace html al fichero tar.gz que contendrá los datos actualizados. Este enlace siempre apuntará al fichero de datos más actual.  
 - Los datos se actualizarán cada cinco minutos, si hay datos nuevos.
-¿Si quiero utilizar al mismo tiempo dos o más ingresos, ¿necesito solicitar más de
-una clave?
-No, podrá utilizar la misma clave para varios ingresos.
-¿Qué usuario y password tengo que utilizar?
+#### ¿Si quiero utilizar al mismo tiempo dos o más ingresos, ¿necesito solicitar más de una clave?
+No, podrá utilizar la misma clave para varios ingresos.  
+
+#### ¿Qué usuario y password tengo que utilizar?
 Esta información será distribuida por la DINE.
-Tengo el usuario y la password que me ha enviado la DINE, pero después de
-teclearlos obtengo un mensaje que dice “Acceso denegado”.
-De alguna manera el usuario o la password han podido ser incorrectamente introducidos. Para
-volver a intentarlo no basta con teclear de nuevo la dirección web. Hay que cerrar totalmente el
-navegador y abrirlo de nuevo, pues la sesión mantiene en memoria estos datos y no vuelve a
-preguntarlos.
-¿Cuándo podremos probar el sistema?
-De momento no hay una fecha definida para las pruebas. Esta fecha será comunicada
-previamente por la DINE.
+
+#### Tengo el usuario y la password que me ha enviado la DINE, pero después de teclearlos obtengo un mensaje que dice “Acceso denegado”.  
+De alguna manera el usuario o la password han podido ser incorrectamente introducidos. Para volver a intentarlo no basta con teclear de nuevo la dirección web. Hay que cerrar totalmente el navegador y abrirlo de nuevo, pues la sesión mantiene en memoria estos datos y no vuelve a preguntarlos.
+
+#### ¿Cuándo podremos probar el sistema?
+De momento no hay una fecha definida para las pruebas. Esta fecha será comunicada previamente por la DINE.
