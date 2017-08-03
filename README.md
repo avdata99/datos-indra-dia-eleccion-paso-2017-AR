@@ -8,4 +8,7 @@ En el archivo [info-previa-DINE.md](info-previa-DINE.md) esta el detalle inicial
 
 Los datos de muestra estan en versión comprimidas y abiertas en el directorio [recursos/DATOS-MUESTRA-2017-08-01](recursos/DATOS-MUESTRA-2017-08-01).  
 
+### Servidor para hacer preuebas
+
+[Ver datos al servidor de pruebas](acceso-pruebas.md).  
 
